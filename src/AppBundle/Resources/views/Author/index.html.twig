@@ -1,0 +1,34 @@
+{% extends '@App/default.html.twig' %}
+
+{% block body %}
+
+
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for author in authors %}
+            <tr>
+                <td>{{ author.id }}</td>
+                <td>{{ author.firstName }}</td>
+                <td>{{ author.lastName }}</td>
+                <td>
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </td>
+            </tr>
+
+        {% endfor %}
+
+
+    </table>
+
+
+
+
+
+{% endblock %}
